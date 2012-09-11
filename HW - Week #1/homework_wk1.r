@@ -102,12 +102,13 @@ attach(dataGoog)
 
 # The Google products which had the most government removal requests were
 # YouTube (184), Web Search (107), and Blogger (104).
-table(data$Product)
+table(dataGoog$Product)
 
 # The top reasons for government removal requests were Defamation (147),
 # Privacy and Security (119), and Other (114).
-table(data$Reason)
+table(dataGoog$Reason)
 
 # Bar chart of removal request court orders by country.
 # Shows US, India, and Brazil with the most total requests by number of court orders, by country.
-barchart(table(data$Country, data$Court.Orders), xlab="# of Court Orders", main="Google Transparency Report: # of Court Orders by Country")
+library(lattice)
+barchart(table(dataGoog$Country, dataGoog$Court.Orders), xlab="# of Court Orders", main="Google Transparency Report: # of Court Orders by Country")
