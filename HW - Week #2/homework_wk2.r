@@ -8,7 +8,10 @@
 
 # PREPARATION/MISE EN PLACE
 # loads stop/frisk data from external CSV
-snf <- read.csv("http://jakeporway.com/teaching/data/snf_2.csv", as.is=TRUE)
+# !!!!FIX PATH!!!!
+# file is in git repo
+# getwd()
+snf <- read.csv("snf_2.csv", as.is=TRUE)
 attach(snf)
 
 # Write code to return the percentage of people who were frisked for each 
