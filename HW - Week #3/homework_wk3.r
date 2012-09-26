@@ -81,7 +81,7 @@ print(top.5.words)
 #    Twitter users use to describe themselves.
 # A: 1 - "news" (233), 2 - "love" (110), 3 - "world" (96), 4 - "follow" (73),
 #    5 - "conservative" (69)
-stop.words <- read.csv("/Users/benturner/Dropbox/Code/R/Data without Borders/HW - Week #3/english.stop.txt", header=TRUE, as.is=TRUE)
+stop.words <- read.csv("english.stop.txt", header=TRUE, as.is=TRUE)
 filtered.words = list.desc.words[ ! (list.desc.words %in% unlist(stop.words)) ] # both have to be same class!
 filtered.words = filtered.words[ ! (filtered.words %in% c("", "&", "-", "|")) ]
 top.5.filtered = rev(sort(table(filtered.words)))[1:5]
