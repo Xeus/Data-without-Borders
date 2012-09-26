@@ -9,7 +9,7 @@
 # PREPARATION/MISE EN PLACE
 # loads stop/frisk data from external CSV
 # ### FIX PATH!!!
-data <- read.csv("/Users/benturner/Dropbox/Code/R/Data without Borders/HW - Week #3/libya_tweets.csv", header=TRUE, as.is=TRUE)
+data <- read.csv("libya_tweets.csv", header=TRUE, as.is=TRUE)
 attach(data)
 
 # ANSWERS BELOW
