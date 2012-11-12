@@ -2,7 +2,7 @@
 # Jake Porway
 #
 # Victor Ben Turner, vt520@nyu.edu
-# Homework: Week #7
+# Homework: Week #8
 
 # PREPARATION/MISE EN PLACE
 # ### FIX PATH!!!
