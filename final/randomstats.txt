@@ -1,0 +1,1292 @@
+6952+107296+101165+78432+600867+100730+63858+950+17480+252501+150007+53673+61991+20443+215829+120401+97003+128883+105392+164120+125597+49215+169829+196644+239006+89048+24116+160878+20223+34677+26457+132548+56245+37935+599670+260767+101574+145428+223427+24059+87191+33462+250051+417201+21110+174382+13057+65346+128279+64388+7343
+
+6427126
+
+> rev(sort(table(bs$state[bs$death.year==2000])))
+
+   TX    CA    NY    OH    FL    PA    IL    MA    MI    NC    MO    TN    MN    GA    VA    AL 
+18560 17318 15771 13208 11581 11447 10202  9422  9271  8670  7996  7854  6592  6556  6366  5984 
+   NJ    KY    IN    WI    OK    LA    MD    SC    AR    MS    CT    OR    WA    WV    IA    AZ 
+ 5842  5776  5619  5426  5390  4730  4635  4453  4377  4060  4057  4021  3831  3795  3472  3377 
+   CO    KS    ME    NM    NE    NV    NH    RI    SD    ND    MT    HI    ID    UT    DE    VT 
+ 3206  2977  2238  1975  1686  1669  1576  1355  1270  1217  1217  1134  1086  1039   909   806 
+   WY    AK    DC 
+  416   269    30 
+> rev(sort(table(bs$state[bs$death.year==1950])))
+
+  CA   NY   MN   MO   NJ   TX   MD   TN   KY   KS   HI   IL   VA   WI   OH   FL   AR   LA   GA 
+3495 2846  710  679  674  642  583  564  331  289  267  253  245  226  223  195  188  158  152 
+  IN   NC   AL   OK   MS   OR   NM   SD   PA   WV   CO   WA   MA   SC   IA   MT   AZ   MI   NE 
+ 130  110   92   90   90   85   72   69   65   60   60   44   42   38   38   37   36   29   24 
+  ME   AK   CT   VT   UT   NH   WY   RI   ND   ID   DE   DC 
+  10   10    7    5    5    4    2    2    1    1    1    1 
+> rev(sort(table(bs$state[bs$death.year==1900])))
+
+  CA   OH   NY   VA   KS   WI   GA   IN   IL   AL   TN   TX   ME   KY   PA   MO   MD   NC   AR 
+1123  320  303  237  198  152  138  132  104  100   94   93   89   81   73   72   67   66   62 
+  LA   SC   MS   NM   FL   MI   WV   IA   CO   NJ   OK   MN   OR   WA   RI   MT   SD   AK   UT 
+  51   46   46   41   29   25   21   17   12   11   10   10    9    8    8    5    4    4    3 
+  NE   MA   DC   VT 
+   3    3    2    1 
+> rev(sort(table(bs$state[bs$death.year==1850])))
+
+NY PA GA OH TN DC IN WV VA KY AL WI MO IL NJ AR TX NC MS MN MI LA KS FL 
+26 14 12 11  6  6  5  4  4  4  4  3  3  3  2  2  1  1  1  1  1  1  1  1 
+> rev(sort(table(bs$state[bs$death.year==1800])))
+
+NY PA NC VA OH NJ MA TX SC NH KY GA DC CT 
+ 5  3  3  2  2  2  2  1  1  1  1  1  1  1 
+
+2000: 265734 / 281421906 = 0.0009443
+1950: 13980 / 150,697,361 = 0.00009277
+1900: 3873 / 76,212,168 = 0.00005082
+1850: 117 / 23,191,876 = 0.0000050449
+1800: 26 / 5,308,483 = 0.000004898
+
+ 1LT    2LT    CPT    MAJ    PFC    PVT    SFC    SGM    SGT    SPC    SSG 
+ 14404   6534   8071  33219 796139 717228  62570   4555 437236   7229  31276 
+
+ > length(grep("PFC", bs$rank))
+[1] 813700
+> length(bs$rank=="LCPL")
+[1] 6427126
+> length(bs$rank=="PVT")
+[1] 6427126
+> length(bs$rank[bs$rank=="LCPL"])
+[1] 16410
+> length(grep("LCPL", bs$rank))
+[1] 16882
+> length(grep("PVT", bs$rank))
+[1] 783822
+> length(grep("PV2", bs$rank))
+[1] 14454
+> unique(bs$state)
+ [1] "AL" "AK" "AZ" "AR" "CA" "CO" "CT" "DE" "FL" "GA" "HI" "ID" "IL" "IN" "IA" "KS" "KY" "LA" "MD"
+[20] "ME" "MA" "MI" "MN" "MS" "MO" "MT" "NV" "NE" "NH" "NJ" "NM" "NY" "NC" "ND" "OH" "OK" "OR" "PA"
+[39] "RI" "SC" "SD" "TN" "TX" "UT" "VT" "VA" "WA" "DC" "WV" "WI" "WY"
+> length(grep("PFC", bs$rank))
+[1] 813700
+> length(grep("SPC", bs$rank))
+[1] 7998
+> length(grep("CPL", bs$rank))
+[1] 519318
+> length(grep("SSG", bs$rank))
+[1] 153950
+> length(grep("SGT", bs$rank))
+[1] 957556
+> length(grep("SFC", bs$rank))
+[1] 66966
+> length(grep("MSG", bs$rank))
+[1] 97652
+> length(grep("1SG", bs$rank))
+[1] 7898
+> length(grep("SGM", bs$rank))
+[1] 4875
+> length(grep("CSM", bs$rank))
+[1] 3231
+> length(grep("1LT", bs$rank))
+[1] 15591
+> length(grep("2LT", bs$rank))
+[1] 7013
+> length(grep("CPT", bs$rank))
+[1] 8771
+> length(grep("MAJ", bs$rank))
+[1] 46245
+> length(grep("COL", bs$rank))
+[1] 60584
+> length(grep("LCL", bs$rank))
+[1] 29
+> length(grep("LCOL", bs$rank))
+[1] 52
+> length(grep("LTC", bs$rank))
+[1] 19106
+> length(grep("GYSGT", bs$rank))
+[1] 5354
+> length(grep("MGYSGT", bs$rank))
+[1] 1012
+
+> nrow(bs[bs$death.year >= 1861 & bs$death.year <= 1865,])
+[1] 143480
+> nrow(bs[bs$death.year >= 1917 & bs$death.year <= 1920,])
+[1] 4023
+> nrow(bs[bs$death.year >= 1940 & bs$death.year <= 1945,])
+[1] 97366
+> # Korean: 1950-1954
+> nrow(bs[bs$death.year >= 1950 & bs$death.year <= 1954,])
+[1] 76204
+[1] 76204
+> # Vietnam
+> nrow(bs[bs$death.year >= 1964 & bs$death.year <= 1975,])
+[1] 375148
+> # Persian Gulf War
+> nrow(bs[bs$death.year >= 1990 & bs$death.year <= 1991,])
+[1] 104683
+> # OIF
+> nrow(bs[bs$death.year >= 2003 & bs$death.year <= 2011,])
+[1] 2412103
+> # OEF
+> nrow(bs[bs$death.year >= 2001 & bs$death.year <= 2013,])
+[1] 3104646
+
+
+              Texas New.York California Ohio Pennsylvania Illinois Florida Michigan
+pop.army.2000 11537    10412       9296 8756         7655     6844    6575     6239
+              North.Carolina Massachusetts Missouri Tennessee Georgia Minnesota Kentucky
+pop.army.2000           5720          5330     5231      5218    4276      4189     4132
+              Virginia Alabama New.Jersey Indiana Wisconsin Oklahoma Maryland Louisiana
+pop.army.2000     4070    4017       3743    3674      3615     3485     3072      3011
+              South.Carolina Arkansas Mississippi Connecticut West.Virginia Iowa Washington
+pop.army.2000           2878     2822        2631        2597          2569 2237       2064
+              Kansas Arizona Colorado Maine New.Mexico Nebraska New.Hampshire North.Dakota
+pop.army.2000   1918    1852     1809  1371       1224     1055           901          860
+              South.Dakota Nevada Hawaii Rhode.Island Montana Idaho Utah Delaware Vermont
+pop.army.2000          858    856    793          756     739   650  590      553     526
+              Wyoming Alaska District.of.Columbia X1.36
+pop.army.2000     256    166                   19    15
+
+              California New.York New.Jersey Missouri Texas Minnesota Tennessee Kentucky
+pop.army.1950       2395     2185        568      557   533       480       444      267
+              Illinois Kansas Ohio Wisconsin Hawaii Arkansas Maryland Virginia Louisiana
+pop.army.1950      218    214  197       196    184      150      147      145       140
+              Florida Indiana Georgia North.Carolina Alabama Oklahoma New.Mexico Mississippi
+pop.army.1950     139     112      83             79      71       60         53          44
+              Colorado South.Dakota Iowa Pennsylvania Massachusetts South.Carolina
+pop.army.1950       43           41   34           27            26             25
+              West.Virginia Michigan Nebraska Arizona X1.36 Washington Maine Montana
+pop.army.1950            24       24       17      17    16         12     9       7
+              Connecticut Vermont Alaska Utah New.Hampshire Wyoming Rhode.Island Idaho
+pop.army.1950           6       5      4    3             3       1            1     1
+              Delaware District.of.Columbia North.Dakota Nevada
+pop.army.1950        1                    0            0      0
+
+              California Virginia New.York Georgia Wisconsin Kansas Indiana Alabama Texas
+pop.army.1900        971      187      148     138       130    115     100      96    90
+              Maine Kentucky Missouri North.Carolina Tennessee Arkansas Pennsylvania
+pop.army.1900    79       71       64             62        61       56           54
+              Illinois South.Carolina New.Mexico Ohio Mississippi Florida Louisiana Michigan
+pop.army.1900       45             39         38   34          32      29        27       23
+              West.Virginia X1.36 Iowa Colorado New.Jersey Minnesota Rhode.Island Oklahoma
+pop.army.1900            19    17   16       12         10        10            8        7
+              Washington Massachusetts Maryland Alaska Nebraska Vermont Utah South.Dakota
+pop.army.1900          4             3        3      3        2       1    1            1
+              Wyoming District.of.Columbia North.Dakota New.Hampshire Nevada Montana Idaho
+pop.army.1900       0                    0            0             0      0       0     0
+              Hawaii Delaware Connecticut Arizona
+pop.army.1900      0        0           0       0
+
+              X1.36 Ohio Georgia New.York West.Virginia Tennessee Kentucky Alabama Wisconsin
+pop.army.1850    18   11       9        8             4         4        4       4         3
+              Missouri Illinois Virginia Pennsylvania Indiana Arkansas Texas North.Carolina
+pop.army.1850        3        3        2            2       2        2     1              1
+              New.Jersey Mississippi Louisiana Wyoming District.of.Columbia Washington
+pop.army.1850          1           1         1       0                    0          0
+              Vermont Utah South.Dakota South.Carolina Rhode.Island Oklahoma North.Dakota
+pop.army.1850       0    0            0              0            0        0            0
+              New.Mexico New.Hampshire Nevada Nebraska Montana Minnesota Michigan
+pop.army.1850          0             0      0        0       0         0        0
+              Massachusetts Maryland Maine Kansas Iowa Idaho Hawaii Florida Delaware
+pop.army.1850             0        0     0      0    0     0      0       0        0
+              Connecticut Colorado California Arizona Alaska
+pop.army.1850           0        0          0       0      0
+
+              X1.36 New.York New.Jersey Massachusetts Texas South.Carolina North.Carolina
+pop.army.1800    19        2          2             2     1              1              1
+              Kentucky Georgia Connecticut Wyoming Wisconsin West.Virginia
+pop.army.1800        1       1           1       0         0             0
+              District.of.Columbia Washington Virginia Vermont Utah Tennessee South.Dakota
+pop.army.1800                    0          0        0       0    0         0            0
+              Rhode.Island Pennsylvania Oklahoma Ohio North.Dakota New.Mexico New.Hampshire
+pop.army.1800            0            0        0    0            0          0             0
+              Nevada Nebraska Montana Missouri Mississippi Minnesota Michigan Maryland Maine
+pop.army.1800      0        0       0        0           0         0        0        0     0
+              Louisiana Kansas Iowa Indiana Illinois Idaho Hawaii Florida Delaware Colorado
+pop.army.1800         0      0    0       0        0     0      0       0        0        0
+              California Arizona Arkansas Alaska Alabama
+pop.army.1800          0       0        0      0       0
+
+                       X1.36 West.Virginia North.Dakota       Maine South.Dakota    Arkansas
+deaths.per.capita.2000     6   0.002040526  0.001800549 0.001678827  0.001549232 0.001495782
+                       Massachusetts    Oklahoma Mississippi    Missouri    Kentucky
+deaths.per.capita.2000   0.001436358 0.001431652 0.001363221 0.001330122 0.001327631
+                       Rhode.Island     Vermont     Alabama   Minnesota   Tennessee
+deaths.per.capita.2000   0.00128406 0.001278681 0.001245893 0.001240292 0.001231917
+                           Montana New.Hampshire        Ohio        Iowa Connecticut
+deaths.per.capita.2000 0.001223834   0.001192634 0.001141722 0.001136949 0.001132725
+                            Kansas   Louisiana    Delaware South.Carolina   New.Mexico
+deaths.per.capita.2000 0.001039523 0.001038656 0.001009017    0.000958464 0.0009553649
+                          Wisconsin     Michigan     Nebraska North.Carolina Pennsylvania
+deaths.per.capita.2000 0.0009522255 0.0009353662 0.0009203936   0.0009063557 0.0008988681
+                            Indiana       Hawaii     New.York    Maryland     Illinois
+deaths.per.capita.2000 0.0008642512 0.0008296375 0.0008120568 0.000800528 0.0007930425
+                           Virginia        Texas      Wyoming        Idaho     Georgia
+deaths.per.capita.2000 0.0007920141 0.0007345137 0.0007320077 0.0006901816 0.000673961
+                         New.Jersey     Colorado       Nevada      Florida   Washington
+deaths.per.capita.2000 0.0006632982 0.0006354895 0.0006159963 0.0006127263 0.0005672724
+                            Arizona   California         Utah       Alaska
+deaths.per.capita.2000 0.0005266113 0.0004637675 0.0003749867 0.0003728225
+                       District.of.Columbia
+deaths.per.capita.2000         4.985683e-05
+
+                       X1.36       Hawaii     New.York    Minnesota     Missouri    Maryland
+deaths.per.capita.1950     7 0.0002203812 0.0001499753 0.0001443242 0.0001213538 0.000110073
+                             Kansas   California    Tennessee South.Dakota     Kentucky
+deaths.per.capita.1950 0.0001074982 0.0001031836 9.913376e-05 9.140962e-05 8.189483e-05
+                         New.Jersey     Arkansas    Wisconsin      Montana   New.Mexico
+deaths.per.capita.1950 8.010126e-05 7.032244e-05 4.213529e-05 4.101109e-05 3.958119e-05
+                          Louisiana     Virginia West.Virginia  Mississippi        Texas
+deaths.per.capita.1950 3.535486e-05 3.461178e-05  3.317953e-05 3.163825e-05 3.078868e-05
+                           Oklahoma      Indiana      Alabama     Illinois         Ohio
+deaths.per.capita.1950 2.608201e-05 2.137987e-05 2.068764e-05 2.037153e-05 1.964214e-05
+                            Georgia       Alaska     Nebraska    Colorado North.Carolina
+deaths.per.capita.1950 1.856726e-05 1.595069e-05 1.402473e-05 1.39494e-05   1.366576e-05
+                               Iowa      Florida South.Carolina      Vermont        Maine
+deaths.per.capita.1950 1.298558e-05 1.220094e-05   9.471557e-06 8.212514e-06 7.843611e-06
+                         Washington      Arizona Massachusetts Pennsylvania     Wyoming
+deaths.per.capita.1950 7.465066e-06 7.016679e-06  6.615114e-06 5.292705e-06 4.05037e-06
+                       New.Hampshire     Michigan         Utah  Connecticut Rhode.Island
+deaths.per.capita.1950  3.236806e-06 2.917962e-06 2.238971e-06 2.055459e-06 1.907816e-06
+                       District.of.Columbia North.Dakota     Delaware        Idaho Nevada
+deaths.per.capita.1950         1.748071e-06 1.557147e-06 1.276161e-06 7.728256e-07      0
+
+                       X1.36       Kansas        Maine     Virginia   California   Wisconsin
+deaths.per.capita.1900     8 7.991689e-05 7.247982e-05 3.830391e-05 3.773519e-05 3.10726e-05
+                               Ohio   New.Mexico     Arkansas      Alabama      Indiana
+deaths.per.capita.1900 2.950093e-05 2.706147e-05 2.637484e-05 2.474888e-05 2.380884e-05
+                           Kentucky      Georgia    Tennessee  Mississippi     New.York
+deaths.per.capita.1900 2.197924e-05 2.130216e-05 1.927341e-05 1.787646e-05 1.684226e-05
+                           Missouri     Maryland South.Carolina    Louisiana West.Virginia
+deaths.per.capita.1900 1.407054e-05 1.401243e-05   1.319298e-05 1.208539e-05   1.17091e-05
+                       North.Carolina     Illinois Rhode.Island       Alaska      Montana
+deaths.per.capita.1900   9.956798e-06 9.098383e-06 7.972384e-06 7.272159e-06 6.257313e-06
+                       Pennsylvania         Iowa South.Dakota        Texas     Colorado
+deaths.per.capita.1900 6.143931e-06 6.122254e-06 5.747093e-06 5.474933e-06 3.642552e-06
+                       District.of.Columbia     Oklahoma     Michigan    Minnesota
+deaths.per.capita.1900         3.295436e-06 3.179059e-06 2.689532e-06 2.285663e-06
+                            Florida     Nebraska      Vermont         Utah   Washington
+deaths.per.capita.1900 2.241472e-06 1.900677e-06 1.776963e-06 1.741301e-06 1.643827e-06
+                         New.Jersey Massachusetts Wyoming North.Dakota New.Hampshire Nevada
+deaths.per.capita.1900 1.422993e-06   4.98635e-07       0            0             0      0
+                       Idaho Hawaii Delaware Connecticut Arizona
+deaths.per.capita.1900     0      0        0           0       0
+
+                       X1.36 District.of.Columbia      Georgia West.Virginia    Tennessee
+deaths.per.capita.1850     9         7.479637e-06 3.483736e-06  1.994463e-06 1.822756e-06
+                          New.York         Ohio     Kentucky Pennsylvania      Alabama
+deaths.per.capita.1850 1.75318e-06 1.384235e-06 1.358324e-06 1.333586e-06 1.306445e-06
+                            Indiana     Virginia     Arkansas    Wisconsin     Missouri
+deaths.per.capita.1850 1.270899e-06 1.205298e-06 1.047389e-06 8.734705e-07 7.586001e-07
+                            Kansas  Mississippi   New.Jersey    Louisiana      Florida
+deaths.per.capita.1850 5.24852e-07 4.589442e-07 4.136223e-07 3.726454e-07 3.608408e-07
+                           Illinois    Minnesota North.Carolina     Michigan        Texas
+deaths.per.capita.1850 3.443457e-07 3.352911e-07   2.461884e-07 1.569424e-07 1.296816e-07
+                       Wyoming Washington Vermont Utah South.Dakota South.Carolina
+deaths.per.capita.1850       0          0       0    0            0              0
+                       Rhode.Island Oklahoma North.Dakota New.Mexico New.Hampshire Nevada
+deaths.per.capita.1850            0        0            0          0             0      0
+                       Nebraska Montana Massachusetts Maryland Maine Iowa Idaho Hawaii
+deaths.per.capita.1850        0       0             0        0     0    0     0      0
+                       Delaware Connecticut Colorado California Arizona Alaska
+deaths.per.capita.1850        0           0        0          0       0      0
+
+                       X1.36 District.of.Columbia New.Hampshire North.Carolina  Connecticut
+deaths.per.capita.1800    10         3.587856e-06  2.429614e-06   1.584108e-06 1.100812e-06
+                           Virginia   New.Jersey South.Carolina Massachusetts     New.York
+deaths.per.capita.1800 1.078642e-06 1.061758e-06   7.460927e-07  7.129245e-07 6.878626e-07
+                               Ohio Pennsylvania     Kentucky      Georgia        Texas
+deaths.per.capita.1800 4.810531e-07 4.760307e-07 4.657284e-07 4.511961e-07 3.280076e-07
+                       Wyoming Wisconsin West.Virginia Washington Vermont Utah Tennessee
+deaths.per.capita.1800       0         0             0          0       0    0         0
+                       South.Dakota Rhode.Island Oklahoma North.Dakota New.Mexico Nevada
+deaths.per.capita.1800            0            0        0            0          0      0
+                       Nebraska Montana Missouri Mississippi Minnesota Michigan Maryland
+deaths.per.capita.1800        0       0        0           0         0        0        0
+                       Maine Louisiana Kansas Iowa Indiana Illinois Idaho Hawaii Florida
+deaths.per.capita.1800     0         0      0    0       0        0     0      0       0
+                       Delaware Colorado California Arizona Arkansas Alaska Alabama
+deaths.per.capita.1800        0        0          0       0        0      0       0
+
+> sort(stats['pop.army.2000',])
+              X1.36 District.of.Columbia Alaska Wyoming Vermont Delaware Utah Idaho Montana
+pop.army.2000    15                   19    166     256     526      553  590   650     739
+              Rhode.Island Hawaii Nevada South.Dakota North.Dakota New.Hampshire Nebraska
+pop.army.2000          756    793    856          858          860           901     1055
+              New.Mexico Maine Colorado Arizona Kansas Washington Iowa West.Virginia
+pop.army.2000       1224  1371     1809    1852   1918       2064 2237          2569
+              Connecticut Mississippi Arkansas South.Carolina Louisiana Maryland Oklahoma
+pop.army.2000        2597        2631     2822           2878      3011     3072     3485
+              Wisconsin Indiana New.Jersey Alabama Virginia Kentucky Minnesota Georgia
+pop.army.2000      3615    3674       3743    4017     4070     4132      4189    4276
+              Tennessee Missouri Massachusetts North.Carolina Michigan Florida Illinois
+pop.army.2000      5218     5231          5330           5720     6239    6575     6844
+              Pennsylvania Ohio California New.York Texas
+pop.army.2000         7655 8756       9296    10412 11537
+> rev(sort(stats['pop.army.2000',]))
+              Texas New.York California Ohio Pennsylvania Illinois Florida Michigan
+pop.army.2000 11537    10412       9296 8756         7655     6844    6575     6239
+              North.Carolina Massachusetts Missouri Tennessee Georgia Minnesota Kentucky
+pop.army.2000           5720          5330     5231      5218    4276      4189     4132
+              Virginia Alabama New.Jersey Indiana Wisconsin Oklahoma Maryland Louisiana
+pop.army.2000     4070    4017       3743    3674      3615     3485     3072      3011
+              South.Carolina Arkansas Mississippi Connecticut West.Virginia Iowa Washington
+pop.army.2000           2878     2822        2631        2597          2569 2237       2064
+              Kansas Arizona Colorado Maine New.Mexico Nebraska New.Hampshire North.Dakota
+pop.army.2000   1918    1852     1809  1371       1224     1055           901          860
+              South.Dakota Nevada Hawaii Rhode.Island Montana Idaho Utah Delaware Vermont
+pop.army.2000          858    856    793          756     739   650  590      553     526
+              Wyoming Alaska District.of.Columbia X1.36
+pop.army.2000     256    166                   19    15
+> rev(sort(stats['pop.army.1950',]))
+              California New.York New.Jersey Missouri Texas Minnesota Tennessee Kentucky
+pop.army.1950       2395     2185        568      557   533       480       444      267
+              Illinois Kansas Ohio Wisconsin Hawaii Arkansas Maryland Virginia Louisiana
+pop.army.1950      218    214  197       196    184      150      147      145       140
+              Florida Indiana Georgia North.Carolina Alabama Oklahoma New.Mexico Mississippi
+pop.army.1950     139     112      83             79      71       60         53          44
+              Colorado South.Dakota Iowa Pennsylvania Massachusetts South.Carolina
+pop.army.1950       43           41   34           27            26             25
+              West.Virginia Michigan Nebraska Arizona X1.36 Washington Maine Montana
+pop.army.1950            24       24       17      17    16         12     9       7
+              Connecticut Vermont Alaska Utah New.Hampshire Wyoming Rhode.Island Idaho
+pop.army.1950           6       5      4    3             3       1            1     1
+              Delaware District.of.Columbia North.Dakota Nevada
+pop.army.1950        1                    0            0      0
+> rev(sort(stats['pop.army.1900',]))
+              California Virginia New.York Georgia Wisconsin Kansas Indiana Alabama Texas
+pop.army.1900        971      187      148     138       130    115     100      96    90
+              Maine Kentucky Missouri North.Carolina Tennessee Arkansas Pennsylvania
+pop.army.1900    79       71       64             62        61       56           54
+              Illinois South.Carolina New.Mexico Ohio Mississippi Florida Louisiana Michigan
+pop.army.1900       45             39         38   34          32      29        27       23
+              West.Virginia X1.36 Iowa Colorado New.Jersey Minnesota Rhode.Island Oklahoma
+pop.army.1900            19    17   16       12         10        10            8        7
+              Washington Massachusetts Maryland Alaska Nebraska Vermont Utah South.Dakota
+pop.army.1900          4             3        3      3        2       1    1            1
+              Wyoming District.of.Columbia North.Dakota New.Hampshire Nevada Montana Idaho
+pop.army.1900       0                    0            0             0      0       0     0
+              Hawaii Delaware Connecticut Arizona
+pop.army.1900      0        0           0       0
+> rev(sort(stats['pop.army.1850',]))
+              X1.36 Ohio Georgia New.York West.Virginia Tennessee Kentucky Alabama Wisconsin
+pop.army.1850    18   11       9        8             4         4        4       4         3
+              Missouri Illinois Virginia Pennsylvania Indiana Arkansas Texas North.Carolina
+pop.army.1850        3        3        2            2       2        2     1              1
+              New.Jersey Mississippi Louisiana Wyoming District.of.Columbia Washington
+pop.army.1850          1           1         1       0                    0          0
+              Vermont Utah South.Dakota South.Carolina Rhode.Island Oklahoma North.Dakota
+pop.army.1850       0    0            0              0            0        0            0
+              New.Mexico New.Hampshire Nevada Nebraska Montana Minnesota Michigan
+pop.army.1850          0             0      0        0       0         0        0
+              Massachusetts Maryland Maine Kansas Iowa Idaho Hawaii Florida Delaware
+pop.army.1850             0        0     0      0    0     0      0       0        0
+              Connecticut Colorado California Arizona Alaska
+pop.army.1850           0        0          0       0      0
+> rev(sort(stats['pop.army.1800',]))
+              X1.36 New.York New.Jersey Massachusetts Texas South.Carolina North.Carolina
+pop.army.1800    19        2          2             2     1              1              1
+              Kentucky Georgia Connecticut Wyoming Wisconsin West.Virginia
+pop.army.1800        1       1           1       0         0             0
+              District.of.Columbia Washington Virginia Vermont Utah Tennessee South.Dakota
+pop.army.1800                    0          0        0       0    0         0            0
+              Rhode.Island Pennsylvania Oklahoma Ohio North.Dakota New.Mexico New.Hampshire
+pop.army.1800            0            0        0    0            0          0             0
+              Nevada Nebraska Montana Missouri Mississippi Minnesota Michigan Maryland Maine
+pop.army.1800      0        0       0        0           0         0        0        0     0
+              Louisiana Kansas Iowa Indiana Illinois Idaho Hawaii Florida Delaware Colorado
+pop.army.1800         0      0    0       0        0     0      0       0        0        0
+              California Arizona Arkansas Alaska Alabama
+pop.army.1800          0       0        0      0       0
+> rev(sort(stats['deaths.per.capita.2000',]))
+                       X1.36 West.Virginia North.Dakota       Maine South.Dakota    Arkansas
+deaths.per.capita.2000     6   0.002040526  0.001800549 0.001678827  0.001549232 0.001495782
+                       Massachusetts    Oklahoma Mississippi    Missouri    Kentucky
+deaths.per.capita.2000   0.001436358 0.001431652 0.001363221 0.001330122 0.001327631
+                       Rhode.Island     Vermont     Alabama   Minnesota   Tennessee
+deaths.per.capita.2000   0.00128406 0.001278681 0.001245893 0.001240292 0.001231917
+                           Montana New.Hampshire        Ohio        Iowa Connecticut
+deaths.per.capita.2000 0.001223834   0.001192634 0.001141722 0.001136949 0.001132725
+                            Kansas   Louisiana    Delaware South.Carolina   New.Mexico
+deaths.per.capita.2000 0.001039523 0.001038656 0.001009017    0.000958464 0.0009553649
+                          Wisconsin     Michigan     Nebraska North.Carolina Pennsylvania
+deaths.per.capita.2000 0.0009522255 0.0009353662 0.0009203936   0.0009063557 0.0008988681
+                            Indiana       Hawaii     New.York    Maryland     Illinois
+deaths.per.capita.2000 0.0008642512 0.0008296375 0.0008120568 0.000800528 0.0007930425
+                           Virginia        Texas      Wyoming        Idaho     Georgia
+deaths.per.capita.2000 0.0007920141 0.0007345137 0.0007320077 0.0006901816 0.000673961
+                         New.Jersey     Colorado       Nevada      Florida   Washington
+deaths.per.capita.2000 0.0006632982 0.0006354895 0.0006159963 0.0006127263 0.0005672724
+                            Arizona   California         Utah       Alaska
+deaths.per.capita.2000 0.0005266113 0.0004637675 0.0003749867 0.0003728225
+                       District.of.Columbia
+deaths.per.capita.2000         4.985683e-05
+> rev(sort(stats['deaths.per.capita.1950',]))
+                       X1.36       Hawaii     New.York    Minnesota     Missouri    Maryland
+deaths.per.capita.1950     7 0.0002203812 0.0001499753 0.0001443242 0.0001213538 0.000110073
+                             Kansas   California    Tennessee South.Dakota     Kentucky
+deaths.per.capita.1950 0.0001074982 0.0001031836 9.913376e-05 9.140962e-05 8.189483e-05
+                         New.Jersey     Arkansas    Wisconsin      Montana   New.Mexico
+deaths.per.capita.1950 8.010126e-05 7.032244e-05 4.213529e-05 4.101109e-05 3.958119e-05
+                          Louisiana     Virginia West.Virginia  Mississippi        Texas
+deaths.per.capita.1950 3.535486e-05 3.461178e-05  3.317953e-05 3.163825e-05 3.078868e-05
+                           Oklahoma      Indiana      Alabama     Illinois         Ohio
+deaths.per.capita.1950 2.608201e-05 2.137987e-05 2.068764e-05 2.037153e-05 1.964214e-05
+                            Georgia       Alaska     Nebraska    Colorado North.Carolina
+deaths.per.capita.1950 1.856726e-05 1.595069e-05 1.402473e-05 1.39494e-05   1.366576e-05
+                               Iowa      Florida South.Carolina      Vermont        Maine
+deaths.per.capita.1950 1.298558e-05 1.220094e-05   9.471557e-06 8.212514e-06 7.843611e-06
+                         Washington      Arizona Massachusetts Pennsylvania     Wyoming
+deaths.per.capita.1950 7.465066e-06 7.016679e-06  6.615114e-06 5.292705e-06 4.05037e-06
+                       New.Hampshire     Michigan         Utah  Connecticut Rhode.Island
+deaths.per.capita.1950  3.236806e-06 2.917962e-06 2.238971e-06 2.055459e-06 1.907816e-06
+                       District.of.Columbia North.Dakota     Delaware        Idaho Nevada
+deaths.per.capita.1950         1.748071e-06 1.557147e-06 1.276161e-06 7.728256e-07      0
+> rev(sort(stats['deaths.per.capita.1900',]))
+                       X1.36       Kansas        Maine     Virginia   California   Wisconsin
+deaths.per.capita.1900     8 7.991689e-05 7.247982e-05 3.830391e-05 3.773519e-05 3.10726e-05
+                               Ohio   New.Mexico     Arkansas      Alabama      Indiana
+deaths.per.capita.1900 2.950093e-05 2.706147e-05 2.637484e-05 2.474888e-05 2.380884e-05
+                           Kentucky      Georgia    Tennessee  Mississippi     New.York
+deaths.per.capita.1900 2.197924e-05 2.130216e-05 1.927341e-05 1.787646e-05 1.684226e-05
+                           Missouri     Maryland South.Carolina    Louisiana West.Virginia
+deaths.per.capita.1900 1.407054e-05 1.401243e-05   1.319298e-05 1.208539e-05   1.17091e-05
+                       North.Carolina     Illinois Rhode.Island       Alaska      Montana
+deaths.per.capita.1900   9.956798e-06 9.098383e-06 7.972384e-06 7.272159e-06 6.257313e-06
+                       Pennsylvania         Iowa South.Dakota        Texas     Colorado
+deaths.per.capita.1900 6.143931e-06 6.122254e-06 5.747093e-06 5.474933e-06 3.642552e-06
+                       District.of.Columbia     Oklahoma     Michigan    Minnesota
+deaths.per.capita.1900         3.295436e-06 3.179059e-06 2.689532e-06 2.285663e-06
+                            Florida     Nebraska      Vermont         Utah   Washington
+deaths.per.capita.1900 2.241472e-06 1.900677e-06 1.776963e-06 1.741301e-06 1.643827e-06
+                         New.Jersey Massachusetts Wyoming North.Dakota New.Hampshire Nevada
+deaths.per.capita.1900 1.422993e-06   4.98635e-07       0            0             0      0
+                       Idaho Hawaii Delaware Connecticut Arizona
+deaths.per.capita.1900     0      0        0           0       0
+> rev(sort(stats['deaths.per.capita.1850',]))
+                       X1.36 District.of.Columbia      Georgia West.Virginia    Tennessee
+deaths.per.capita.1850     9         7.479637e-06 3.483736e-06  1.994463e-06 1.822756e-06
+                          New.York         Ohio     Kentucky Pennsylvania      Alabama
+deaths.per.capita.1850 1.75318e-06 1.384235e-06 1.358324e-06 1.333586e-06 1.306445e-06
+                            Indiana     Virginia     Arkansas    Wisconsin     Missouri
+deaths.per.capita.1850 1.270899e-06 1.205298e-06 1.047389e-06 8.734705e-07 7.586001e-07
+                            Kansas  Mississippi   New.Jersey    Louisiana      Florida
+deaths.per.capita.1850 5.24852e-07 4.589442e-07 4.136223e-07 3.726454e-07 3.608408e-07
+                           Illinois    Minnesota North.Carolina     Michigan        Texas
+deaths.per.capita.1850 3.443457e-07 3.352911e-07   2.461884e-07 1.569424e-07 1.296816e-07
+                       Wyoming Washington Vermont Utah South.Dakota South.Carolina
+deaths.per.capita.1850       0          0       0    0            0              0
+                       Rhode.Island Oklahoma North.Dakota New.Mexico New.Hampshire Nevada
+deaths.per.capita.1850            0        0            0          0             0      0
+                       Nebraska Montana Massachusetts Maryland Maine Iowa Idaho Hawaii
+deaths.per.capita.1850        0       0             0        0     0    0     0      0
+                       Delaware Connecticut Colorado California Arizona Alaska
+deaths.per.capita.1850        0           0        0          0       0      0
+> rev(sort(stats['deaths.per.capita.1800',]))
+                       X1.36 District.of.Columbia New.Hampshire North.Carolina  Connecticut
+deaths.per.capita.1800    10         3.587856e-06  2.429614e-06   1.584108e-06 1.100812e-06
+                           Virginia   New.Jersey South.Carolina Massachusetts     New.York
+deaths.per.capita.1800 1.078642e-06 1.061758e-06   7.460927e-07  7.129245e-07 6.878626e-07
+                               Ohio Pennsylvania     Kentucky      Georgia        Texas
+deaths.per.capita.1800 4.810531e-07 4.760307e-07 4.657284e-07 4.511961e-07 3.280076e-07
+                       Wyoming Wisconsin West.Virginia Washington Vermont Utah Tennessee
+deaths.per.capita.1800       0         0             0          0       0    0         0
+                       South.Dakota Rhode.Island Oklahoma North.Dakota New.Mexico Nevada
+deaths.per.capita.1800            0            0        0            0          0      0
+                       Nebraska Montana Missouri Mississippi Minnesota Michigan Maryland
+deaths.per.capita.1800        0       0        0           0         0        0        0
+                       Maine Louisiana Kansas Iowa Indiana Illinois Idaho Hawaii Florida
+deaths.per.capita.1800     0         0      0    0       0        0     0      0       0
+                       Delaware Colorado California Arizona Arkansas Alaska Alabama
+deaths.per.capita.1800        0        0          0       0        0      0       0
+> rev(sort(stats['pop.army.2000',]))
+              Texas New.York California Ohio Pennsylvania Illinois Florida Michigan
+pop.army.2000 11537    10412       9296 8756         7655     6844    6575     6239
+              North.Carolina Massachusetts Missouri Tennessee Georgia Minnesota Kentucky
+pop.army.2000           5720          5330     5231      5218    4276      4189     4132
+              Virginia Alabama New.Jersey Indiana Wisconsin Oklahoma Maryland Louisiana
+pop.army.2000     4070    4017       3743    3674      3615     3485     3072      3011
+              South.Carolina Arkansas Mississippi Connecticut West.Virginia Iowa Washington
+pop.army.2000           2878     2822        2631        2597          2569 2237       2064
+              Kansas Arizona Colorado Maine New.Mexico Nebraska New.Hampshire North.Dakota
+pop.army.2000   1918    1852     1809  1371       1224     1055           901          860
+              South.Dakota Nevada Hawaii Rhode.Island Montana Idaho Utah Delaware Vermont
+pop.army.2000          858    856    793          756     739   650  590      553     526
+              Wyoming Alaska District.of.Columbia X1.36
+pop.army.2000     256    166                   19    15
+> rev(sort(stats['pop.army.1950',]))
+              California New.York New.Jersey Missouri Texas Minnesota Tennessee Kentucky
+pop.army.1950       2395     2185        568      557   533       480       444      267
+              Illinois Kansas Ohio Wisconsin Hawaii Arkansas Maryland Virginia Louisiana
+pop.army.1950      218    214  197       196    184      150      147      145       140
+              Florida Indiana Georgia North.Carolina Alabama Oklahoma New.Mexico Mississippi
+pop.army.1950     139     112      83             79      71       60         53          44
+              Colorado South.Dakota Iowa Pennsylvania Massachusetts South.Carolina
+pop.army.1950       43           41   34           27            26             25
+              West.Virginia Michigan Nebraska Arizona X1.36 Washington Maine Montana
+pop.army.1950            24       24       17      17    16         12     9       7
+              Connecticut Vermont Alaska Utah New.Hampshire Wyoming Rhode.Island Idaho
+pop.army.1950           6       5      4    3             3       1            1     1
+              Delaware District.of.Columbia North.Dakota Nevada
+pop.army.1950        1                    0            0      0
+> rev(sort(stats['pop.army.1900',]))
+              California Virginia New.York Georgia Wisconsin Kansas Indiana Alabama Texas
+pop.army.1900        971      187      148     138       130    115     100      96    90
+              Maine Kentucky Missouri North.Carolina Tennessee Arkansas Pennsylvania
+pop.army.1900    79       71       64             62        61       56           54
+              Illinois South.Carolina New.Mexico Ohio Mississippi Florida Louisiana Michigan
+pop.army.1900       45             39         38   34          32      29        27       23
+              West.Virginia X1.36 Iowa Colorado New.Jersey Minnesota Rhode.Island Oklahoma
+pop.army.1900            19    17   16       12         10        10            8        7
+              Washington Massachusetts Maryland Alaska Nebraska Vermont Utah South.Dakota
+pop.army.1900          4             3        3      3        2       1    1            1
+              Wyoming District.of.Columbia North.Dakota New.Hampshire Nevada Montana Idaho
+pop.army.1900       0                    0            0             0      0       0     0
+              Hawaii Delaware Connecticut Arizona
+pop.army.1900      0        0           0       0
+> rev(sort(stats['pop.army.1850',]))
+              X1.36 Ohio Georgia New.York West.Virginia Tennessee Kentucky Alabama Wisconsin
+pop.army.1850    18   11       9        8             4         4        4       4         3
+              Missouri Illinois Virginia Pennsylvania Indiana Arkansas Texas North.Carolina
+pop.army.1850        3        3        2            2       2        2     1              1
+              New.Jersey Mississippi Louisiana Wyoming District.of.Columbia Washington
+pop.army.1850          1           1         1       0                    0          0
+              Vermont Utah South.Dakota South.Carolina Rhode.Island Oklahoma North.Dakota
+pop.army.1850       0    0            0              0            0        0            0
+              New.Mexico New.Hampshire Nevada Nebraska Montana Minnesota Michigan
+pop.army.1850          0             0      0        0       0         0        0
+              Massachusetts Maryland Maine Kansas Iowa Idaho Hawaii Florida Delaware
+pop.army.1850             0        0     0      0    0     0      0       0        0
+              Connecticut Colorado California Arizona Alaska
+pop.army.1850           0        0          0       0      0
+> rev(sort(stats['pop.army.1800',]))
+              X1.36 New.York New.Jersey Massachusetts Texas South.Carolina North.Carolina
+pop.army.1800    19        2          2             2     1              1              1
+              Kentucky Georgia Connecticut Wyoming Wisconsin West.Virginia
+pop.army.1800        1       1           1       0         0             0
+              District.of.Columbia Washington Virginia Vermont Utah Tennessee South.Dakota
+pop.army.1800                    0          0        0       0    0         0            0
+              Rhode.Island Pennsylvania Oklahoma Ohio North.Dakota New.Mexico New.Hampshire
+pop.army.1800            0            0        0    0            0          0             0
+              Nevada Nebraska Montana Missouri Mississippi Minnesota Michigan Maryland Maine
+pop.army.1800      0        0       0        0           0         0        0        0     0
+              Louisiana Kansas Iowa Indiana Illinois Idaho Hawaii Florida Delaware Colorado
+pop.army.1800         0      0    0       0        0     0      0       0        0        0
+              California Arizona Arkansas Alaska Alabama
+pop.army.1800          0       0        0      0       0
+> rev(sort(stats['pop.airforce.2000',]))
+                  Texas California Florida New.York Ohio Pennsylvania Illinois Massachusetts
+pop.airforce.2000  3557       2899    2104     2098 1749         1502     1288          1215
+                  Missouri Michigan Tennessee North.Carolina Georgia Minnesota Oklahoma
+pop.airforce.2000     1143     1122      1028            993     967       934      896
+                  Alabama Wisconsin Virginia New.Jersey Colorado Arizona Louisiana Indiana
+pop.airforce.2000     842       774      759        740      706     694       692     668
+                  South.Carolina Kentucky Washington Arkansas Maryland Mississippi
+pop.airforce.2000            624      624        606      576      561         546
+                  Connecticut Kansas Iowa West.Virginia Nevada New.Mexico Maine Nebraska
+pop.airforce.2000         474    460  432           406    355        346   292      262
+                  New.Hampshire Idaho Montana Rhode.Island Utah South.Dakota Hawaii Delaware
+pop.airforce.2000           243   187     180          174  172          167    152      148
+                  North.Dakota Vermont Wyoming Alaska X1.36 District.of.Columbia
+pop.airforce.2000          137     110      73     46    20                    4
+> rev(sort(stats['pop.airforce.1950',]))
+                  California Texas Missouri New.York Minnesota X1.36 Tennessee Kentucky
+pop.airforce.1950        151    58       58       41        26    21        20       19
+                  New.Jersey Illinois Virginia New.Mexico Kansas North.Carolina Indiana
+pop.airforce.1950         17        9        8          7      7              6       6
+                  Florida Alabama South.Dakota Oklahoma Louisiana Wisconsin Pennsylvania
+pop.airforce.1950       6       6            5        5         5         4            4
+                  Georgia Arkansas Michigan Hawaii Ohio Mississippi Massachusetts Colorado
+pop.airforce.1950       4        4        3      3    2           2             2        2
+                  West.Virginia Maryland Iowa Wyoming District.of.Columbia Washington
+pop.airforce.1950             1        1    1       0                    0          0
+                  Vermont Utah South.Carolina Rhode.Island North.Dakota New.Hampshire Nevada
+pop.airforce.1950       0    0              0            0            0             0      0
+                  Nebraska Montana Maine Idaho Delaware Connecticut Arizona Alaska
+pop.airforce.1950        0       0     0     0        0           0       0      0
+> rev(sort(stats['pop.airforce.1900',]))
+                  X1.36 Texas California Wyoming Wisconsin West.Virginia
+pop.airforce.1900    22     1          1       0         0             0
+                  District.of.Columbia Washington Virginia Vermont Utah Tennessee
+pop.airforce.1900                    0          0        0       0    0         0
+                  South.Dakota South.Carolina Rhode.Island Pennsylvania Oklahoma Ohio
+pop.airforce.1900            0              0            0            0        0    0
+                  North.Dakota North.Carolina New.York New.Mexico New.Jersey New.Hampshire
+pop.airforce.1900            0              0        0          0          0             0
+                  Nevada Nebraska Montana Missouri Mississippi Minnesota Michigan
+pop.airforce.1900      0        0       0        0           0         0        0
+                  Massachusetts Maryland Maine Louisiana Kentucky Kansas Iowa Indiana
+pop.airforce.1900             0        0     0         0        0      0    0       0
+                  Illinois Idaho Hawaii Georgia Florida Delaware Connecticut Colorado
+pop.airforce.1900        0     0      0       0       0        0           0        0
+                  Arizona Arkansas Alaska Alabama
+pop.airforce.1900       0        0      0       0
+> rev(sort(stats['pop.airforce.1850',]))
+                  X1.36 Wyoming Wisconsin West.Virginia District.of.Columbia Washington
+pop.airforce.1850    23       0         0             0                    0          0
+                  Virginia Vermont Utah Texas Tennessee South.Dakota South.Carolina
+pop.airforce.1850        0       0    0     0         0            0              0
+                  Rhode.Island Pennsylvania Oklahoma Ohio North.Dakota North.Carolina
+pop.airforce.1850            0            0        0    0            0              0
+                  New.York New.Mexico New.Jersey New.Hampshire Nevada Nebraska Montana
+pop.airforce.1850        0          0          0             0      0        0       0
+                  Missouri Mississippi Minnesota Michigan Massachusetts Maryland Maine
+pop.airforce.1850        0           0         0        0             0        0     0
+                  Louisiana Kentucky Kansas Iowa Indiana Illinois Idaho Hawaii Georgia
+pop.airforce.1850         0        0      0    0       0        0     0      0       0
+                  Florida Delaware Connecticut Colorado California Arizona Arkansas Alaska
+pop.airforce.1850       0        0           0        0          0       0        0      0
+                  Alabama
+pop.airforce.1850       0
+> rev(sort(stats['pop.navy.2000',]))
+              California Texas New.York Florida Massachusetts Ohio Pennsylvania Illinois
+pop.navy.2000       4798  3646     3332    2893          2745 2690         2345     2123
+              Michigan North.Carolina Missouri Minnesota Tennessee Virginia New.Jersey
+pop.navy.2000     1875           1740     1660      1604      1571     1382       1299
+              Georgia Indiana Alabama Oklahoma Wisconsin Washington Arkansas Kentucky
+pop.navy.2000    1256    1206    1168     1115      1114       1084      976      974
+              Connecticut Louisiana South.Carolina Maryland Iowa Mississippi West.Virginia
+pop.navy.2000         962       956            920      899  811         804           789
+              Arizona Colorado Kansas Maine New.Hampshire New.Mexico Rhode.Island Nevada
+pop.navy.2000     761      737    639   520           416        414          412    411
+              Nebraska Montana Utah Idaho South.Dakota North.Dakota Delaware Vermont Hawaii
+pop.navy.2000      362     291  264   255          253          210      193     177    152
+              Wyoming Alaska X1.36 District.of.Columbia
+pop.navy.2000      87     52    25                    7
+> rev(sort(stats['pop.navy.1950',]))
+              California New.York New.Jersey Minnesota Missouri Tennessee Florida Texas
+pop.navy.1950        653      395         78        68       53        33      31    28
+              X1.36 Kentucky Maryland Wisconsin Hawaii Kansas Pennsylvania Illinois Virginia
+pop.navy.1950    26       25       20        19     19     16           15       14       12
+              New.Mexico Ohio Alabama Massachusetts Indiana North.Carolina South.Dakota
+pop.navy.1950         12   11      10             9       9              8            7
+              South.Carolina Arkansas Georgia Oklahoma Louisiana Colorado Arizona
+pop.navy.1950              7        7       6        5         5        5       5
+              West.Virginia Iowa Nebraska Mississippi Alaska Washington Rhode.Island
+pop.navy.1950             3    3        2           2      2          1            1
+              North.Dakota Montana Michigan Maine Connecticut Wyoming District.of.Columbia
+pop.navy.1950            1       1        1     1           1       0                    0
+              Vermont Utah New.Hampshire Nevada Idaho Delaware
+pop.navy.1950       0    0             0      0     0        0
+> rev(sort(stats['pop.navy.1900',]))
+              California New.York X1.36 Maryland Virginia Pennsylvania Maine Ohio Kansas
+pop.navy.1900         34       31    27       12        9            9     8    7      6
+              Wisconsin Indiana Illinois South.Carolina North.Carolina Michigan New.Jersey
+pop.navy.1900         5       5        4              3              2        2          1
+              Missouri Mississippi Iowa Alabama Wyoming West.Virginia District.of.Columbia
+pop.navy.1900        1           1    1       1       0             0                    0
+              Washington Vermont Utah Texas Tennessee South.Dakota Rhode.Island Oklahoma
+pop.navy.1900          0       0    0     0         0            0            0        0
+              North.Dakota New.Mexico New.Hampshire Nevada Nebraska Montana Minnesota
+pop.navy.1900            0          0             0      0        0       0         0
+              Massachusetts Louisiana Kentucky Idaho Hawaii Georgia Florida Delaware
+pop.navy.1900             0         0        0     0      0       0       0        0
+              Connecticut Colorado Arizona Arkansas Alaska
+pop.navy.1900           0        0       0        0      0
+> rev(sort(stats['pop.navy.1850',]))
+              X1.36 Virginia Florida Wyoming Wisconsin West.Virginia District.of.Columbia
+pop.navy.1850    28        1       1       0         0             0                    0
+              Washington Vermont Utah Texas Tennessee South.Dakota South.Carolina
+pop.navy.1850          0       0    0     0         0            0              0
+              Rhode.Island Pennsylvania Oklahoma Ohio North.Dakota North.Carolina New.York
+pop.navy.1850            0            0        0    0            0              0        0
+              New.Mexico New.Jersey New.Hampshire Nevada Nebraska Montana Missouri
+pop.navy.1850          0          0             0      0        0       0        0
+              Mississippi Minnesota Michigan Massachusetts Maryland Maine Louisiana Kentucky
+pop.navy.1850           0         0        0             0        0     0         0        0
+              Kansas Iowa Indiana Illinois Idaho Hawaii Georgia Delaware Connecticut
+pop.navy.1850      0    0       0        0     0      0       0        0           0
+              Colorado California Arizona Arkansas Alaska Alabama
+pop.navy.1850        0          0       0        0      0       0
+> rev(sort(stats['pop.navy.1800',]))
+              X1.36 Wyoming Wisconsin West.Virginia District.of.Columbia Washington Virginia
+pop.navy.1800    29       0         0             0                    0          0        0
+              Vermont Utah Texas Tennessee South.Dakota South.Carolina Rhode.Island
+pop.navy.1800       0    0     0         0            0              0            0
+              Pennsylvania Oklahoma Ohio North.Dakota North.Carolina New.York New.Mexico
+pop.navy.1800            0        0    0            0              0        0          0
+              New.Jersey New.Hampshire Nevada Nebraska Montana Missouri Mississippi
+pop.navy.1800          0             0      0        0       0        0           0
+              Minnesota Michigan Massachusetts Maryland Maine Louisiana Kentucky Kansas Iowa
+pop.navy.1800         0        0             0        0     0         0        0      0    0
+              Indiana Illinois Idaho Hawaii Georgia Florida Delaware Connecticut Colorado
+pop.navy.1800       0        0     0      0       0       0        0           0        0
+              California Arizona Arkansas Alaska Alabama
+pop.navy.1800          0       0        0      0       0
+> rev(sort(stats['pop.marines.1800',]))
+                 X1.36 Wyoming Wisconsin West.Virginia District.of.Columbia Washington
+pop.marines.1800    34       0         0             0                    0          0
+                 Virginia Vermont Utah Texas Tennessee South.Dakota South.Carolina
+pop.marines.1800        0       0    0     0         0            0              0
+                 Rhode.Island Pennsylvania Oklahoma Ohio North.Dakota North.Carolina
+pop.marines.1800            0            0        0    0            0              0
+                 New.York New.Mexico New.Jersey New.Hampshire Nevada Nebraska Montana
+pop.marines.1800        0          0          0             0      0        0       0
+                 Missouri Mississippi Minnesota Michigan Massachusetts Maryland Maine
+pop.marines.1800        0           0         0        0             0        0     0
+                 Louisiana Kentucky Kansas Iowa Indiana Illinois Idaho Hawaii Georgia
+pop.marines.1800         0        0      0    0       0        0     0      0       0
+                 Florida Delaware Connecticut Colorado California Arizona Arkansas Alaska
+pop.marines.1800       0        0           0        0          0       0        0      0
+                 Alabama
+pop.marines.1800       0
+> rev(sort(stats['pop.marines.1850',]))
+                 X1.36 Wyoming Wisconsin West.Virginia District.of.Columbia Washington
+pop.marines.1850    33       0         0             0                    0          0
+                 Virginia Vermont Utah Texas Tennessee South.Dakota South.Carolina
+pop.marines.1850        0       0    0     0         0            0              0
+                 Rhode.Island Pennsylvania Oklahoma Ohio North.Dakota North.Carolina
+pop.marines.1850            0            0        0    0            0              0
+                 New.York New.Mexico New.Jersey New.Hampshire Nevada Nebraska Montana
+pop.marines.1850        0          0          0             0      0        0       0
+                 Missouri Mississippi Minnesota Michigan Massachusetts Maryland Maine
+pop.marines.1850        0           0         0        0             0        0     0
+                 Louisiana Kentucky Kansas Iowa Indiana Illinois Idaho Hawaii Georgia
+pop.marines.1850         0        0      0    0       0        0     0      0       0
+                 Florida Delaware Connecticut Colorado California Arizona Arkansas Alaska
+pop.marines.1850       0        0           0        0          0       0        0      0
+                 Alabama
+pop.marines.1850       0
+> rev(sort(stats['pop.marines.1900',]))
+                 X1.36 California New.York Wisconsin District.of.Columbia Virginia
+pop.marines.1900    32         17        4         3                    2        2
+                 South.Dakota South.Carolina Ohio Alaska Wyoming West.Virginia Washington
+pop.marines.1900            1              1    1      1       0             0          0
+                 Vermont Utah Texas Tennessee Rhode.Island Pennsylvania Oklahoma
+pop.marines.1900       0    0     0         0            0            0        0
+                 North.Dakota North.Carolina New.Mexico New.Jersey New.Hampshire Nevada
+pop.marines.1900            0              0          0          0             0      0
+                 Nebraska Montana Missouri Mississippi Minnesota Michigan Massachusetts
+pop.marines.1900        0       0        0           0         0        0             0
+                 Maryland Maine Louisiana Kentucky Kansas Iowa Indiana Illinois Idaho Hawaii
+pop.marines.1900        0     0         0        0      0    0       0        0     0      0
+                 Georgia Florida Delaware Connecticut Colorado Arizona Arkansas Alabama
+pop.marines.1900       0       0        0           0        0       0        0       0
+> rev(sort(stats['pop.marines.1950',]))
+                 California New.York Hawaii Texas Minnesota X1.36 Missouri Tennessee
+pop.marines.1950        172       70     54    34        33    31       27        22
+                 New.Jersey Illinois Florida Virginia Ohio Louisiana Kentucky South.Carolina
+pop.marines.1950         21       14      10        6    6         6        6              5
+                 Pennsylvania Maryland Colorado South.Dakota Kansas Arkansas Alabama
+pop.marines.1950            5        5        5            4      4        4       4
+                 Wisconsin Oklahoma Indiana Massachusetts Georgia West.Virginia New.Mexico
+pop.marines.1950         3        3       3             2       2             1          1
+                 New.Hampshire Nebraska Mississippi Wyoming District.of.Columbia Washington
+pop.marines.1950             1        1           1       0                    0          0
+                 Vermont Utah Rhode.Island North.Dakota North.Carolina Nevada Montana
+pop.marines.1950       0    0            0            0              0      0       0
+                 Michigan Maine Iowa Idaho Delaware Connecticut Arizona Alaska
+pop.marines.1950        0     0    0     0        0           0       0      0
+> rev(sort(stats['pop.marines.2000',]))
+                 California Texas New.York Ohio Florida Pennsylvania Illinois Massachusetts
+pop.marines.2000       1346  1109      949  782     731          666      606           571
+                 North.Carolina Michigan Missouri Virginia Tennessee Minnesota New.Jersey
+pop.marines.2000            548      539      476      394       391       367        364
+                 Indiana Georgia Wisconsin Louisiana Kentucky Maryland Arizona Oklahoma
+pop.marines.2000     336     331       324       282      282      273     269      265
+                 Connecticut Alabama South.Carolina Arkansas Washington Mississippi Iowa
+pop.marines.2000         253     252            237      220        218         215  197
+                 West.Virginia Colorado Kansas Maine New.Mexico Nevada Nebraska
+pop.marines.2000           193      191    157   132        117    114      105
+                 New.Hampshire Montana Idaho Utah Rhode.Island North.Dakota South.Dakota
+pop.marines.2000            99      82    81   75           70           66           61
+                 Hawaii Delaware Vermont X1.36 Wyoming Alaska District.of.Columbia
+pop.marines.2000     58       48      39    30      29     16                    2
+
+> rev(sort(state.pops[state.pops$Year==2000,]))
+  including.Puerto.Ri Total.Resident.Popula     South  Midwest     West Northeast California
+2           285230516             281421906 100236820 64392776 63197932  53594378   33871648
+     Texas New.York  Florida Illinois Pennsylvania     Ohio Michigan New.Jersey Georgia
+2 20851820 18976457 15982378 12419293     12281054 11353140  9938444    8414350 8186453
+  North.Carolina Virginia Massachusetts Indiana Washington Tennessee Missouri Wisconsin
+2        8049313  7078515       6349097 6080485    5894121   5689283  5595211   5363675
+  Maryland Arizona Minnesota Louisiana Alabama Colorado Kentucky South.Carolina Puerto.Rico
+2  5296486 5130632   4919479   4468976 4447100  4301261  4041769        4012012     3808610
+  Oklahoma  Oregon Connecticut    Iowa Mississippi  Kansas Arkansas    Utah  Nevada
+2  3450654 3421399     3405565 2926324     2844658 2688418  2673400 2233169 1998257
+  New.Mexico West.Virginia Nebraska   Idaho   Maine New.Hampshire  Hawaii Rhode.Island
+2    1819046       1808344  1711263 1293953 1274923       1235786 1211537      1048319
+  Montana Delaware South.Dakota North.Dakota Alaska Vermont District.of.Columbia Wyoming
+2  902195   783600       754844       642200 626932  608827               572059  493782
+  Year
+2 2000
+> rev(sort(state.pops[state.pops$Year==1950,]))
+  New.York California Pennsylvania Illinois    Ohio   Texas Michigan New.Jersey
+4 14830192   10586223     10498012  8712176 7946627 7711194  6371766    4835329
+  Massachusetts North.Carolina Missouri Indiana Georgia Wisconsin Virginia Tennessee Alabama
+4       4690514        4061929  3954653 3934224 3444578   3434575  3318680   3291718 3061743
+  Minnesota Kentucky Florida Louisiana    Iowa Washington Maryland Oklahoma Mississippi
+4   2982483  2944806 2771305   2683516 2621073    2378963  2343001  2233351     2178914
+  South.Carolina Connecticut West.Virginia Arkansas  Kansas  Oregon Nebraska Colorado  Maine
+4        2117027     2007280       2005552  1909511 1905299 1521341  1325510  1325089 913774
+  District.of.Columbia Rhode.Island Arizona   Utah New.Mexico South.Dakota North.Dakota
+4               802178       791896  749587 688862     681187       652740       619636
+   Idaho Montana New.Hampshire Hawaii Vermont Delaware Wyoming Nevada Alaska Year
+4 588637  559456        533242 499794  377747   318085  290529 160083 128643 1950
+> rev(sort(state.pops[state.pops$Year==1900,]))
+  New.York Pennsylvania Illinois    Ohio Missouri   Texas Massachusetts Indiana Michigan
+5  7268894      6302115  4821550 4157545  3106665 3048710       2805346 2516462  2420982
+     Iowa Georgia Kentucky Wisconsin Tennessee North.Carolina New.Jersey Virginia Alabama
+5 2231853 2216331  2147174   2069042   2020616        1893810    1883669  1854184 1828697
+  Minnesota Mississippi California  Kansas Louisiana South.Carolina Arkansas Maryland
+5   1751394     1551270    1485053 1470495   1381625        1340316  1311564  1188044
+  Nebraska West.Virginia Connecticut Oklahoma  Maine Colorado Florida Washington
+5  1066300        958800      908420   790391 694466   539700  528542     518103
+  Rhode.Island Oregon New.Hampshire South.Dakota Vermont North.Dakota District.of.Columbia
+5       428556 413536        411588       401570  343641       319146               278718
+    Utah Montana New.Mexico Delaware  Idaho Hawaii Arizona Wyoming Alaska Nevada Year
+5 276749  243329     195310   184735 161772 154001  122931   92531  63592  42355 1900
+> rev(sort(state.pops[state.pops$Year==1850,]))
+  New.York Pennsylvania    Ohio Virginia Tennessee Massachusetts Indiana Kentucky Georgia
+6  3097394      2311786 1980329  1119348   1002717        994514  988416   982405  906185
+  North.Carolina Illinois Alabama Missouri South.Carolina Mississippi  Maine Maryland
+6         869039   851470  771623   682044         668507      606526 583169   583034
+  Louisiana New.Jersey Michigan Connecticut New.Hampshire Vermont Wisconsin West.Virginia
+6    517762     489555   397654      370792        317976  314120    305391        302313
+   Texas Arkansas   Iowa Rhode.Island California Delaware Florida New.Mexico
+6 212592   209897 192214       147545      92597    91532   87445      61547
+  District.of.Columbia Oregon  Utah Minnesota Year Washington
+6                51687  12093 11380      6077 1850       1201
+> rev(sort(state.pops[state.pops$Year==1800,]))
+  Virginia Pennsylvania New.York North.Carolina Massachusetts South.Carolina Maryland
+7   807557       602365   589051         478103        422845         345591   341548
+  Connecticut Kentucky New.Jersey New.Hampshire Georgia Vermont Tennessee Maine
+7      251002   220955     211149        183858  162686  154465    105602 96540
+  West.Virginia Rhode.Island Delaware  Ohio District.of.Columbia Mississippi Indiana Year
+7         78592        69122    64273 45365                 8144        7600    5641 1800
+  Alabama
+7    1250
+
+•	rev(sort(table(bs$war)))
+
+WORLD WAR II 
+2873227 
+                                                                                         
+1173313 
+KOREA 
+768669 
+VIETNAM 
+634830 
+WORLD WAR I 
+350223 
+WORLD WAR II, KOREA 
+175399 
+CIVIL WAR 
+163817 
+KOREA, VIETNAM 
+94051 
+WORLD WAR II, KOREA, VIETNAM 
+88833 
+SPANISH AMERICAN WAR 
+28906 
+PERSIAN GULF 
+25501 
+WORLD WAR II, WORLD WAR I 
+9497 
+PERSIAN GULF, VIETNAM 
+8755 
+CONFEDERATE STATES 
+5192 
+IRAQ 
+4826 
+WORLD WAR II, VIETNAM 
+3630 
+REVOLUTIONARY WAR 
+3205 
+WAR OF 1812 
+1723 
+IRAQ, PERSIAN GULF 
+1687 
+MEXICAN BORDER, WORLD WAR I 
+1488 
+AFGHANISTAN 
+1144 
+WORLD WAR II, KOREA, WORLD WAR I 
+1023 
+INDIAN WARS 
+882 
+MEXICAN WAR 
+844 
+MEXICAN BORDER 
+706 
+SPANISH AMERICAN WAR, WORLD WAR I 
+550 
+AFGHANISTAN, IRAQ 
+497 
+GRENADA, LEBANON 
+451 
+KOREA, PERSIAN GULF, VIETNAM 
+388 
+GRENADA, LEBANON, VIETNAM 
+311 
+GRENADA 
+269 
+AFGHANISTAN, IRAQ, PERSIAN GULF 
+263 
+LEBANON 
+233 
+KOREA, PERSIAN GULF 
+204 
+WORLD WAR II, MEXICAN BORDER, WORLD WAR I 
+139 
+PERSIAN GULF, SOMALIA 
+139 
+PANAMA, PERSIAN GULF 
+133 
+CIVIL WAR, INDIAN WARS 
+133 
+AFGHANISTAN, PERSIAN GULF 
+131 
+PANAMA 
+114 
+KOREA, WORLD WAR I 
+111 
+IRAQ, PERSIAN GULF, VIETNAM 
+107 
+PANAMA, PERSIAN GULF, SOMALIA 
+84 
+MEXICAN BORDER, SPANISH AMERICAN WAR, WORLD WAR I 
+59 
+KOSOVO 
+57 
+CIVIL WAR, MEXICAN WAR 
+57 
+SOMALIA 
+55 
+MEXICAN WAR, WORLD WAR I 
+51 
+IRAQ, VIETNAM 
+51 
+LEBANON, VIETNAM 
+50 
+WORLD WAR II, SPANISH AMERICAN WAR, WORLD WAR I 
+49 
+GRENADA, LEBANON, PANAMA, PERSIAN GULF, VIETNAM 
+40 
+GRENADA, LEBANON, PANAMA, PERSIAN GULF 
+39 
+KOSOVO, PERSIAN GULF 
+33 
+GRENADA, VIETNAM 
+33 
+GRENADA, LEBANON, PANAMA, VIETNAM 
+32 
+GRENADA, LEBANON, PANAMA, PERSIAN GULF, SOMALIA 
+30 
+WORLD WAR II, KOREA, MEXICAN BORDER, WORLD WAR I 
+29 
+, WORLD WAR I 
+29 
+WORLD WAR II, KOREA, VIETNAM, WORLD WAR I 
+27 
+PANAMA, PERSIAN GULF, VIETNAM 
+23 
+WORLD WAR II, KOREA, PERSIAN GULF, VIETNAM 
+22 
+GRENADA, LEBANON, PANAMA, PERSIAN GULF, SOMALIA, VIETNAM 
+22 
+GRENADA, KOREA, LEBANON, VIETNAM 
+22 
+WAR OF 1812, REVOLUTIONARY WAR 
+20 
+IRAQ, KOSOVO 
+20 
+CIVIL WAR, SPANISH AMERICAN WAR 
+18 
+WORLD WAR II, MEXICAN BORDER 
+17 
+, WORLD WAR II 
+17 
+PERSIAN GULF, SOMALIA, VIETNAM 
+16 
+GRENADA, PERSIAN GULF 
+16 
+CONFEDERATE STATES, CIVIL WAR 
+16 
+WAR OF 1812, INDIAN WARS 
+15 
+KOREA, VIETNAM, WORLD WAR I 
+15 
+GRENADA, LEBANON, PERSIAN GULF, VIETNAM 
+15 
+AFGHANISTAN, IRAQ, KOSOVO, PERSIAN GULF, PHILIPPINES, SOMALIA 
+15 
+GRENADA, LEBANON, PANAMA 
+14 
+WORLD WAR II, PERSIAN GULF 
+13 
+MEXICAN BORDER, SPANISH AMERICAN WAR 
+12 
+LEBANON, PERSIAN GULF 
+12 
+AFGHANISTAN, PERSIAN GULF, VIETNAM 
+12 
+MEXICAN WAR, SPANISH AMERICAN WAR, WORLD WAR I 
+11 
+LEBANON, PERSIAN GULF, VIETNAM 
+11 
+IRAQ, KOSOVO, PERSIAN GULF 
+11 
+AFGHANISTAN, VIETNAM 
+11 
+, KOREA 
+11 
+GRENADA, PERSIAN GULF, VIETNAM 
+10 
+GRENADA, PANAMA, PERSIAN GULF, VIETNAM 
+10 
+WORLD WAR II, SPANISH AMERICAN WAR 
+9 
+PHILIPPINES 
+9 
+KOREA, LEBANON, VIETNAM 
+9 
+GRENADA, PANAMA, PERSIAN GULF 
+9 
+KOSOVO, PERSIAN GULF, SOMALIA 
+8 
+AFGHANISTAN, IRAQ, VIETNAM 
+8 
+AFGHANISTAN, IRAQ, KOSOVO, PERSIAN GULF 
+8 
+AFGHANISTAN, IRAQ, KOSOVO 
+8 
+WORLD WAR II, VIETNAM, WORLD WAR I 
+7 
+VIETNAM, WORLD WAR I 
+7 
+PANAMA, PERSIAN GULF, SOMALIA, VIETNAM 
+7 
+INDIAN WARS, SPANISH AMERICAN WAR 
+7 
+GRENADA, LEBANON, PERSIAN GULF 
+7 
+AFGHANISTAN, KOSOVO 
+7 
+WORLD WAR II,  
+6 
+GRENADA, WORLD WAR II, KOREA, LEBANON, VIETNAM 
+6 
+AFGHANISTAN, IRAQ, PERSIAN GULF, VIETNAM 
+6 
+WORLD WAR II, KOREA, PERSIAN GULF 
+5 
+PANAMA, VIETNAM 
+5 
+GRENADA, KOSOVO, LEBANON, PANAMA, PERSIAN GULF, SOMALIA 
+5 
+AFGHANISTAN, KOSOVO, PERSIAN GULF, PHILIPPINES, SOMALIA 
+5 
+WORLD WAR II, PERSIAN GULF, VIETNAM 
+4 
+WORLD WAR II, MEXICAN WAR, WORLD WAR I 
+4 
+WORLD WAR II, MEXICAN BORDER, SPANISH AMERICAN WAR, WORLD WAR I 
+4 
+WORLD WAR II, KOREA, SPANISH AMERICAN WAR, WORLD WAR I 
+4 
+WORLD WAR II, KOREA, LEBANON, VIETNAM 
+4 
+WAR OF 1812, WORLD WAR II, KOREA 
+4 
+WAR OF 1812, MEXICAN WAR 
+4 
+KOSOVO, PERSIAN GULF, VIETNAM 
+4 
+KOSOVO, PANAMA, PERSIAN GULF, SOMALIA 
+4 
+KOREA, LEBANON 
+4 
+GRENADA, PERSIAN GULF, SOMALIA 
+4 
+GRENADA, PANAMA, PERSIAN GULF, SOMALIA 
+4 
+WORLD WAR II, KOREA, MEXICAN BORDER 
+3 
+WORLD WAR II, , KOREA 
+3 
+WAR OF 1812, WORLD WAR I 
+3 
+LEBANON, PANAMA, PERSIAN GULF 
+3 
+IRAQ, PERSIAN GULF, SOMALIA 
+3 
+INDIAN WARS, SPANISH AMERICAN WAR, WORLD WAR I 
+3 
+INDIAN WARS, REVOLUTIONARY WAR 
+3 
+INDIAN WARS, MEXICAN WAR 
+3 
+GRENADA, LEBANON, PERSIAN GULF, SOMALIA 
+3 
+GRENADA, KOREA, VIETNAM 
+3 
+GRENADA, KOREA, LEBANON, PANAMA, PERSIAN GULF, SOMALIA, VIETNAM 
+3 
+CIVIL WAR, WORLD WAR II 
+3 
+CIVIL WAR, INDIAN WARS, SPANISH AMERICAN WAR 
+3 
+AFGHANISTAN, IRAQ, PERSIAN GULF, PHILIPPINES 
+3 
+AFGHANISTAN, IRAQ, KOSOVO, PANAMA, PERSIAN GULF, PHILIPPINES, SOMALIA 
+3 
+, WORLD WAR II, WORLD WAR I 
+3 
+, VIETNAM 
+3 
+WORLD WAR II, KOREA, SPANISH AMERICAN WAR 
+2 
+WORLD WAR II, KOREA, MEXICAN BORDER, VIETNAM, WORLD WAR I 
+2 
+WORLD WAR II, , WORLD WAR I 
+2 
+WORLD WAR I,  
+2 
+WAR OF 1812, WORLD WAR II 
+2 
+WAR OF 1812, INDIAN WARS, REVOLUTIONARY WAR 
+2 
+PHILIPPINES, VIETNAM 
+2 
+LEBANON, PANAMA, PERSIAN GULF, VIETNAM 
+2 
+KOSOVO, SOMALIA 
+2 
+KOREA,  
+2 
+IRAQ, PERSIAN GULF, PHILIPPINES 
+2 
+IRAQ, KOSOVO, PERSIAN GULF, SOMALIA 
+2 
+INDIAN WARS, WORLD WAR I 
+2 
+GRENADA, PERSIAN GULF, SOMALIA, VIETNAM 
+2 
+GRENADA, PANAMA, VIETNAM 
+2 
+GRENADA, KOSOVO, LEBANON, PANAMA, PERSIAN GULF, SOMALIA, VIETNAM 
+2 
+GRENADA, KOREA, LEBANON, PANAMA, VIETNAM 
+2 
+GRENADA, KOREA, LEBANON 
+2 
+CONFEDERATE STATES, MEXICAN WAR 
+2 
+CIVIL WAR, WORLD WAR I 
+2 
+AFGHANISTAN, IRAQ, KOSOVO, PHILIPPINES, SOMALIA 
+2 
+AFGHANISTAN, GRENADA, KOSOVO, LEBANON, PANAMA, PERSIAN GULF, PHILIPPINES, SOMALIA 
+2 
+AFGHANISTAN, GRENADA, IRAQ, KOSOVO, LEBANON, PANAMA, PERSIAN GULF, PHILIPPINES, SOMALIA 
+2 
+, WORLD WAR II, KOREA, VIETNAM 
+2 
+WORLD WAR II, MEXICAN WAR 
+1 
+WORLD WAR II, KOREA, VIETNAM,  
+1 
+WORLD WAR II, KOREA, , VIETNAM 
+1 
+WORLD WAR II, KOREA,  
+1 
+WORLD WAR II, , KOREA, VIETNAM 
+1 
+WAR OF 1812, WORLD WAR II, KOREA, VIETNAM 
+1 
+WAR OF 1812, INDIAN WARS, MEXICAN WAR 
+1 
+WAR OF 1812, CONFEDERATE STATES 
+1 
+PHILIPPINES, WORLD WAR I 
+1 
+PHILIPPINES, SPANISH AMERICAN WAR 
+1 
+PANAMA, SOMALIA 
+1 
+MEXICAN WAR, SPANISH AMERICAN WAR 
+1 
+LEBANON, PANAMA, PERSIAN GULF, SOMALIA 
+1 
+KOSOVO, PERSIAN GULF, SOMALIA, VIETNAM 
+1 
+KOREA, VIETNAM,  
+1 
+KOREA, SPANISH AMERICAN WAR 
+1 
+KOREA, MEXICAN WAR 
+1 
+KOREA, MEXICAN BORDER 
+1 
+IRAQ, SOMALIA 
+1 
+IRAQ, PANAMA, PERSIAN GULF 
+1 
+IRAQ, PANAMA 
+1 
+IRAQ, LEBANON, PERSIAN GULF 
+1 
+INDIAN WARS, MEXICAN BORDER, SPANISH AMERICAN WAR, WORLD WAR I 
+1 
+GRENADA, WORLD WAR II, LEBANON, VIETNAM 
+1 
+GRENADA, WORLD WAR II, KOREA, LEBANON, PANAMA, PERSIAN GULF, SOMALIA, VIETNAM 
+1 
+GRENADA, PANAMA 
+1 
+GRENADA, LEBANON, PERSIAN GULF, SOMALIA, VIETNAM 
+1 
+GRENADA, LEBANON, PANAMA, SOMALIA, VIETNAM 
+1 
+GRENADA, KOREA, PANAMA, VIETNAM 
+1 
+GRENADA, KOREA, PANAMA, PERSIAN GULF, SOMALIA, VIETNAM 
+1 
+GRENADA, KOREA, LEBANON, PERSIAN GULF, VIETNAM 
+1 
+GRENADA, KOREA, LEBANON, PANAMA, PERSIAN GULF, VIETNAM 
+1 
+GRENADA, KOREA 
+1 
+GRENADA, IRAQ 
+1 
+CONFEDERATE STATES, CIVIL WAR, INDIAN WARS 
+1 
+CIVIL WAR, INDIAN WARS, MEXICAN WAR 
+1 
+CIVIL WAR,  
+1 
+AFGHANISTAN, WORLD WAR I 
+1 
+AFGHANISTAN, PERSIAN GULF, SOMALIA 
+1 
+AFGHANISTAN, LEBANON, PERSIAN GULF 
+1 
+AFGHANISTAN, KOSOVO, PERSIAN GULF, PHILIPPINES 
+1 
+AFGHANISTAN, KOSOVO, PERSIAN GULF 
+1 
+AFGHANISTAN, KOSOVO, PANAMA, PERSIAN GULF, PHILIPPINES, SOMALIA 
+1 
+AFGHANISTAN, IRAQ, SOMALIA 
+1 
+AFGHANISTAN, IRAQ, PHILIPPINES 
+1 
+AFGHANISTAN, IRAQ, PERSIAN GULF, SOMALIA 
+1 
+AFGHANISTAN, IRAQ, KOSOVO, SOMALIA 
+1 
+AFGHANISTAN, IRAQ, KOSOVO, PHILIPPINES 
+1 
+AFGHANISTAN, IRAQ, KOSOVO, PERSIAN GULF, PHILIPPINES 
+1 
+AFGHANISTAN, GRENADA, KOSOVO, LEBANON 
+1 
+AFGHANISTAN, GRENADA, IRAQ, LEBANON, PANAMA, PERSIAN GULF, PHILIPPINES, SOMALIA, VIETNAM 
+1 
+AFGHANISTAN, GRENADA 
+1 
+, MEXICAN BORDER, WORLD WAR I 
+1 
+, KOREA, VIETNAM 
+1 
+KOREA” 
+1
